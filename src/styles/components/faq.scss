@@ -1,0 +1,54 @@
+@import "../shared/colors.scss";
+
+.faq-section-title {
+  text-align: center;
+}
+
+.faq-container {
+  border-top: 1px solid $grey;
+  border-bottom: 1px solid $grey;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.faq {
+  padding: 1em;
+  border-bottom: 1px solid $grey;
+  transition: height 2s;
+
+  .faq__title p {
+    margin: 0;
+    &:after {
+      content: "\25BC";
+      color: $grey;
+      font-weight: bold;
+      float: right;
+      margin-left: 1.5em;
+    }
+  }
+
+  &.active .faq__title p {
+    font-weight: bold;
+    &:after {
+      content: "\25B2";
+    }
+  }
+
+  .faq__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+}
+
+.faq:last-child {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq-container {
+    border: 1px solid $grey;
+    border-radius: 15px;
+  }
+}

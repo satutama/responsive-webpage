@@ -34,5 +34,8 @@
   },
   "bugs": {
     "url": "https://github.com/coolblue-development/frontend-assignment-exercise/issues"
+  },
+  "dependencies": {
+    "yarn": "^1.22.10"
   }
 }
