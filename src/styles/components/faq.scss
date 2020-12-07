@@ -5,8 +5,8 @@
 }
 
 .faq-container {
-  border-top: 1px solid $grey;
-  border-bottom: 1px solid $grey;
+  border-top: 2px solid $grey;
+  border-bottom: 2px solid $grey;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -14,12 +14,18 @@
 
 .faq {
   padding: 1em;
-  border-bottom: 1px solid $grey;
+  border-bottom: 2px solid $grey;
   transition: height 2s;
 
-  .faq-title p {
-    margin: 0;
-    &:after {
+  .faq-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    p {
+      margin: 0;
+      color: $dark-grey;
+    }
+    .arrow:after {
       content: "\25BC";
       color: $grey;
       font-weight: bold;
@@ -28,27 +34,34 @@
     }
   }
 
-  &.active .faq-title p {
-    font-weight: bold;
-    &:after {
-      content: "\25B2";
-    }
-  }
-
   .faq-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    padding-right: 1.5em;
+    p {
+      color: $dark-grey;
+      margin-bottom: 0;
+    }
   }
-}
 
-.faq:last-child {
-  border-bottom: none;
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &.active {
+    .faq-title p {
+      font-weight: bold;
+    }
+    .arrow:after {
+      content: "\25B2";
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
   .faq-container {
-    border: 1px solid $grey;
-    border-radius: 15px;
+    border: 2px solid $grey;
+    border-radius: 0.5em;
   }
 }

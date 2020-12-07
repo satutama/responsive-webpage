@@ -1,42 +1,48 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('js is processed');
-})
-
-var faqs = document.querySelectorAll('.js-faq');
-for (var i = 0; i < faqs.length; i++) {
-    faqs[i].addEventListener("click", function(e) {
-    var current = this;
-    var content = current.querySelector('.js-faq-content')
-    for (var i = 0; i < faqs.length; i++) {
-        if (current != faqs[i]) {
+// FAQ toggle script starts here
+const emToPx = 16;
+const faqs = document.querySelectorAll('.js-faq');
+for (let i = 0; i < faqs.length; i++) {
+  faqs[i].addEventListener('click', function (e) {
+    const current = this;
+    const content = current.querySelector('.js-faq-content')
+    for (let i = 0; i < faqs.length; i++) {
+      if (current != faqs[i]) {
         faqs[i].classList.remove('active');
         faqs[i].querySelector('.js-faq-content').style.maxHeight = null;
-        } else if (current.classList.contains('active') === true) {
+      } else if (current.classList.contains('active') === true) {
         current.classList.remove('active');
         content.style.maxHeight = null;
-        } else {
+      } else {
         current.classList.add('active')
-        content.style.maxHeight = content.scrollHeight + "px";
-        }
+        content.style.maxHeight = `${content.scrollHeight / emToPx}em`;
+      }
     }
     e.preventDefault();
-    });
-}; 
+  });
+};
+// FAQ toggle script ends here
 
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
-  modal.style.display = "block";
+//Modal pop up script starts here
+const modal = document.getElementsByClassName('js-modal')[0];
+const btn = document.getElementsByClassName('js-info-btn')[0];
+const span = document.getElementsByClassName('js-close')[0];
+const subHeader = document.getElementsByClassName('js-sub-header')[0];
+
+btn.onclick = () => {
+  subHeader.innerHTML = 'by sOmfy';
+  modal.style.display = 'block';
 }
 
-span.onclick = function() {
-  modal.style.display = "none";
+span.onclick = () => {
+  subHeader.innerHTML = 'by Warning';
+  modal.style.display = 'none';
 }
 
-window.onclick = function(event) {
+window.onclick = (event) => {
   if (event.target == modal) {
-    modal.style.display = "none";
+    subHeader.innerHTML = 'by Warning';
+    modal.style.display = 'none';
   }
 }
+//Modal pop up script starts here
