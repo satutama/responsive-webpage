@@ -5,7 +5,8 @@ button {
   margin: 0.5em;
   border: none;
   border-radius: 3em;
-  min-width: 15em; }
+  min-width: 15em;
+  font-size: 0.9em; }
   button.primary {
     background-image: linear-gradient(#ad646d, #7f1028); }
   button.secondary {
@@ -75,7 +76,8 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 1; }
   header h1 {
     margin: 0.5em 0 0 0;
     font-size: 1.5em; }
@@ -88,7 +90,7 @@ header {
 .banner {
   display: flex;
   background-color: #edf2f4;
-  padding: 1em 0 15vw;
+  padding: 1em 0 18vw;
   flex-direction: column;
   text-align: center; }
 
@@ -116,7 +118,7 @@ header {
   .banner-text .banner-title {
     font-weight: bold; }
 
-@media only screen and (min-width: 438px) {
+@media only screen and (min-width: 489px) {
   .banner {
     padding-bottom: 8vw; } }
 
@@ -150,8 +152,10 @@ header {
   .banner .banner-2 img {
     width: 70%; } }
 
-.faq-section .title {
-  text-align: center; }
+.faq-section {
+  margin-top: 1em; }
+  .faq-section .title {
+    text-align: center; }
 
 .faq-container {
   border-top: 2px solid #8d99ae;
@@ -170,7 +174,8 @@ header {
     cursor: pointer; }
     .faq .faq-title p {
       margin: 0;
-      color: #2b2d42; }
+      color: #2b2d42;
+      font-size: 0.9em; }
     .faq .faq-title .arrow:after {
       content: "\25BC";
       color: #8d99ae;
@@ -184,7 +189,8 @@ header {
     padding-right: 1.5em; }
     .faq .faq-content p {
       color: #2b2d42;
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      font-size: 0.9em; }
   .faq:last-child {
     border-bottom: none; }
   .faq.active .faq-title p {
@@ -211,7 +217,7 @@ header {
   .modal .modal-container {
     width: 90%;
     max-width: 29em;
-    margin: 5.6em auto 0;
+    margin: 1em auto;
     border-radius: 0.5em;
     overflow: hidden;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5); }
@@ -229,7 +235,7 @@ header {
     background-color: #ffffff;
     padding: 1em; }
     .modal .modal-content .product picture img {
-      width: 65%; }
+      width: 50%; }
     .modal .modal-content .product-title {
       color: #7f1028; }
     .modal .modal-content hr {
@@ -237,6 +243,12 @@ header {
   .modal button {
     width: 40vw;
     max-width: 15em; }
+
+@media only screen and (min-width: 768px) {
+  .modal .modal-container {
+    margin: 5.6em auto 0; }
+  .modal .product picture img {
+    width: 65%; } }
 
 *,
 *:before,
@@ -246,6 +258,7 @@ header {
 body {
   margin: 0;
   padding-top: 4.2em;
+  padding-bottom: 4em;
   font-family: Helvetica, Arial, sans-serif; }
 
 .content-container {

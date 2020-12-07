@@ -3,7 +3,7 @@
 .banner {
   display: flex;
   background-color: $light-grey;
-  padding: 1em 0 15vw;
+  padding: 1em 0 18vw;
   flex-direction: column;
   text-align: center;
 }
@@ -39,7 +39,7 @@
   }
 }
 
-@media only screen and (min-width: 438px) {
+@media only screen and (min-width: 489px) {
   .banner {
     padding-bottom: 8vw;
   }

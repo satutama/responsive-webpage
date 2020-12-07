@@ -8,6 +8,7 @@ button {
   border: none;
   border-radius: 3em;
   min-width: 15em;
+  font-size: 0.9em;
   &.primary {
     background-image: linear-gradient($light-red, $dark-red);
   }

@@ -1,7 +1,10 @@
 @import "../shared/colors.scss";
 
-.faq-section .title {
-  text-align: center;
+.faq-section {
+  margin-top: 1em;
+  .title {
+    text-align: center;
+  }
 }
 
 .faq-container {
@@ -24,6 +27,7 @@
     p {
       margin: 0;
       color: $dark-grey;
+      font-size: 0.9em;
     }
     .arrow:after {
       content: "\25BC";
@@ -42,6 +46,7 @@
     p {
       color: $dark-grey;
       margin-bottom: 0;
+      font-size: 0.9em;
     }
   }
 

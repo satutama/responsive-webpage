@@ -15,7 +15,7 @@
   .modal-container {
     width: 90%;
     max-width: 29em;
-    margin: 5.6em auto 0;
+    margin: 1em auto;
     border-radius: 0.5em;
     overflow: hidden;
     box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.5);
@@ -39,7 +39,7 @@
     background-color: $white;
     padding: 1em;
     .product picture img {
-      width: 65%;
+      width: 50%;
     }
     .product-title {
       color: $dark-red;
@@ -52,5 +52,16 @@
   button {
     width: 40vw;
     max-width: 15em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    .modal-container {
+      margin: 5.6em auto 0;
+    }
+    .product picture img {
+      width: 65%;
+    }
   }
 }
