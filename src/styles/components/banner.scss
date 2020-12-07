@@ -1,4 +1,61 @@
+@import "../shared/colors.scss";
+
 .banner {
   display: flex;
-  justify-content: space-evenly;
+  background-color: $light-grey;
+  padding: 2em;
+  flex-direction: column;
+  text-align: center;
+}
+.banner-1 {
+  margin: 4em 0;
+  img {
+    width: 50%;
+  }
+}
+
+.banner-text {
+  position: absolute;
+
+  .banner-title,
+  .banner-sub-title {
+    font-size: 1.5em;
+    color: $dark-grey;
+    margin: 0;
+  }
+  .banner-title {
+    font-weight: bold;
+  }
+  .banner-button-area {
+    margin-top: 2em;
+  }
+  button {
+    width: 16em;
+  }
+}
+
+.banner-2 {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .banner-1 {
+    margin: 0;
+    img {
+      width: 70%;
+    }
+  }
+  .banner-text {
+    position: inherit;
+  }
+  .banner-2 {
+    display: block;
+    img {
+      width: 80%;
+    }
+  }
 }

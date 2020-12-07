@@ -16,45 +16,73 @@
 
   <div class="content-container">
     <div class="banner">
-      <div class="banner-img-1">
-        <p>test</p>
+      <picture class="banner-1 col-4">
+        <source class="col-12" srcset="./assets/images/product-2-transparent.webp" type="image/webp">
+        <img class="col-12" src="./assets/images/product-2-transparent.jpg"
+          srcset="./assets/images/product-2-transparent.webp" alt="product-2">
+      </picture>
+
+      <div class="banner-text col-4">
+        <div class="banner-text-area">
+          <p class="banner-title">Protect your home</p>
+          <p class="banner-sub-title">for a criminally low price</p>
+        </div>
+        <div class="banner-button-area">
+          <button class="primary" type="button">Get started for € 59,99</button>
+          <button class="secondary" type="button" id="myBtn">More information</button>
+        </div>
       </div>
-      <div class="banner-text">
-        <p>test2</p>
+
+      <picture class="banner-2 col-4">
+        <source class="col-12" media="(min-width: 768px)" srcset="./assets/images/product-1-transparent.webp"
+          type="image/webp">
+        <img class="col-12" src="./assets/images/product-1-transparent.jpg"
+          srcset="./assets/images/product-1-transparent.webp" alt="product 1">
+      </picture>
+
+    </div>
+
+    <div class="faq-section">
+      <div class="title">
+        <h3>Most asked question</h3>
       </div>
-      <div class="banner-img-2">
-        <p>test3</p>
+      <div class="col-6 faq-container">
+        <div class="faq js-faq">
+          <div class="faq-title">
+            <p>What what</p>
+          </div>
+          <div class="faq-content js-faq-content">
+            <p>i dont know</p>
+          </div>
+        </div>
+        <div class="faq js-faq">
+          <div class="faq-title">
+            <p>seriousley?</p>
+          </div>
+          <div class="faq-content js-faq-content">
+            <p>yes</p>
+          </div>
+        </div>
+        <div class="faq js-faq">
+          <div class="faq-title">
+            <p>what about what?</p>
+          </div>
+          <div class="faq-content js-faq-content">
+            <p>no idea</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="faq-section-title">
-      <h3>Most asked Question</h3>
+  </div>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <p>Some text in the Modal..</p>
+      <button class="primary close" type="button">close</button>
     </div>
-    <div class="col-6 faq-container">
-      <div class="faq js-faq">
-        <div class="faq__title">
-          <p>What what</p>
-        </div>
-        <div class="faq__content js-faq-content">
-          <p>i dont know</p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="faq__title">
-          <p>seriousley?</p>
-        </div>
-        <div class="faq__content js-faq-content">
-          <p>yes</p>
-        </div>
-      </div>
-      <div class="faq js-faq">
-        <div class="faq__title">
-          <p>what about what?</p>
-        </div>
-        <div class="faq__content js-faq-content">
-          <p>no idea</p>
-        </div>
-      </div>
-    </div>
+
   </div>
   <script src="./assets/scripts/bundle.js" defer></script>
 </body>

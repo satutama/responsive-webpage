@@ -1,6 +1,6 @@
 @import "../shared/colors.scss";
 
-.faq-section-title {
+.faq-section .title {
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
   border-bottom: 1px solid $grey;
   transition: height 2s;
 
-  .faq__title p {
+  .faq-title p {
     margin: 0;
     &:after {
       content: "\25BC";
@@ -28,14 +28,14 @@
     }
   }
 
-  &.active .faq__title p {
+  &.active .faq-title p {
     font-weight: bold;
     &:after {
       content: "\25B2";
     }
   }
 
-  .faq__content {
+  .faq-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
