@@ -2,7 +2,7 @@
 const emToPx = 16;
 const faqs = document.querySelectorAll('.js-faq');
 for (let i = 0; i < faqs.length; i++) {
-  faqs[i].addEventListener('click', function (e) {
+  faqs[i].addEventListener('click', function () {
     const current = this;
     const content = current.querySelector('.js-faq-content')
     for (let i = 0; i < faqs.length; i++) {
@@ -17,7 +17,6 @@ for (let i = 0; i < faqs.length; i++) {
         content.style.maxHeight = `${content.scrollHeight / emToPx}em`;
       }
     }
-    e.preventDefault();
   });
 };
 // FAQ toggle script ends here
