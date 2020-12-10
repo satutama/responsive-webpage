@@ -91,9 +91,33 @@
   !*** ./src/scripts/main.js ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("// FAQ toggle script starts here\nconst emToPx = 16;\nconst faqs = document.querySelectorAll('.js-faq');\n\nfor (let i = 0; i < faqs.length; i++) {\n  faqs[i].addEventListener('click', function () {\n    const current = this;\n    const content = current.querySelector('.js-faq-content');\n\n    for (let i = 0; i < faqs.length; i++) {\n      if (current != faqs[i]) {\n        faqs[i].classList.remove('active');\n        faqs[i].querySelector('.js-faq-content').style.maxHeight = null;\n      } else if (current.classList.contains('active') === true) {\n        current.classList.remove('active');\n        content.style.maxHeight = null;\n      } else {\n        current.classList.add('active');\n        content.style.maxHeight = `${content.scrollHeight / emToPx}em`;\n      }\n    }\n  });\n}\n\n; // FAQ toggle script ends here\n//Modal pop up script starts here\n\nconst modal = document.getElementsByClassName('js-modal')[0];\nconst infoButton = document.getElementsByClassName('js-info-btn')[0];\nconst closeButton = document.getElementsByClassName('js-close-info-btn')[0];\nconst subHeader = document.getElementsByClassName('js-sub-header')[0];\n\ninfoButton.onclick = () => {\n  subHeader.innerHTML = 'by sOmfy';\n  modal.style.display = 'block';\n};\n\ncloseButton.onclick = () => {\n  subHeader.innerHTML = 'by Warning';\n  modal.style.display = 'none';\n};\n\nwindow.onclick = event => {\n  if (event.target == modal) {\n    subHeader.innerHTML = 'by Warning';\n    modal.style.display = 'none';\n  }\n}; //Modal pop up script starts here\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
+eval("const {\n  modalPopUp\n} = __webpack_require__(/*! ./modal */ \"./src/scripts/modal.js\");\n\nconst {\n  toggleFunction\n} = __webpack_require__(/*! ./toggle */ \"./src/scripts/toggle.js\");\n\ntoggleFunction();\nmodalPopUp();\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/modal.js":
+/*!******************************!*\
+  !*** ./src/scripts/modal.js ***!
+  \******************************/
+/*! exports provided: modalPopUp */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"modalPopUp\", function() { return modalPopUp; });\nfunction modalPopUp() {\n  //Modal pop up script starts here\n  const modal = document.getElementsByClassName('js-modal')[0];\n  const infoButton = document.getElementsByClassName('js-info-btn')[0];\n  const closeButton = document.getElementsByClassName('js-close-info-btn')[0];\n  const subHeader = document.getElementsByClassName('js-sub-header')[0];\n\n  infoButton.onclick = () => {\n    subHeader.innerHTML = 'by sOmfy';\n    modal.style.display = 'block';\n  };\n\n  closeButton.onclick = () => {\n    subHeader.innerHTML = 'by Warning';\n    modal.style.display = 'none';\n  };\n\n  window.onclick = event => {\n    if (event.target == modal) {\n      subHeader.innerHTML = 'by Warning';\n      modal.style.display = 'none';\n    }\n  }; //Modal pop up script starts here\n\n}\n\n//# sourceURL=webpack:///./src/scripts/modal.js?");
+
+/***/ }),
+
+/***/ "./src/scripts/toggle.js":
+/*!*******************************!*\
+  !*** ./src/scripts/toggle.js ***!
+  \*******************************/
+/*! exports provided: toggleFunction */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"toggleFunction\", function() { return toggleFunction; });\nfunction toggleFunction() {\n  const emToPx = 16;\n  const faqs = document.querySelectorAll('.js-faq');\n\n  for (let i = 0; i < faqs.length; i++) {\n    faqs[i].addEventListener('click', function () {\n      const current = this;\n      const content = current.querySelector('.js-faq-content');\n\n      for (let i = 0; i < faqs.length; i++) {\n        if (current != faqs[i]) {\n          faqs[i].classList.remove('active');\n          faqs[i].querySelector('.js-faq-content').style.maxHeight = null;\n        } else if (current.classList.contains('active') === true) {\n          current.classList.remove('active');\n          content.style.maxHeight = null;\n        } else {\n          current.classList.add('active');\n          content.style.maxHeight = `${content.scrollHeight / emToPx}em`;\n        }\n      }\n    });\n  }\n\n  ;\n}\n\n//# sourceURL=webpack:///./src/scripts/toggle.js?");
 
 /***/ }),
 
