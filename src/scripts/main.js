@@ -1,5 +1,5 @@
-const { modalPopUp } = require("./modal");
-const { toggleFunction } = require("./toggle");
+import {toggleFunction} from"./toggle";
+import {modalPopUp} from"./modal";
 
 toggleFunction();
 modalPopUp();

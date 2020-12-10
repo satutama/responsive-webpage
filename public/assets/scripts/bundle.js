@@ -90,10 +90,11 @@
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("const {\n  modalPopUp\n} = __webpack_require__(/*! ./modal */ \"./src/scripts/modal.js\");\n\nconst {\n  toggleFunction\n} = __webpack_require__(/*! ./toggle */ \"./src/scripts/toggle.js\");\n\ntoggleFunction();\nmodalPopUp();\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _toggle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toggle */ \"./src/scripts/toggle.js\");\n/* harmony import */ var _modal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modal */ \"./src/scripts/modal.js\");\n\n\nObject(_toggle__WEBPACK_IMPORTED_MODULE_0__[\"toggleFunction\"])();\nObject(_modal__WEBPACK_IMPORTED_MODULE_1__[\"modalPopUp\"])();\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
 
 /***/ }),
 
