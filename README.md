@@ -1,10 +1,9 @@
-# Frontend assignment exercise
+# Frontend exercise
 
-## Assignment
 
 ### Goal
 
-The goal of this assignment is to convert the provided designs below to a working frontend using HTML, CSS and JS. 
+The goal of this exercise is to convert the provided designs below to a working frontend using HTML, CSS and JS. 
 
 - [Homepage - Desktop](designs/Red%20Alert%20-%20Homepage%20-%20Desktop.png)
 - [Homepage - Mobile](designs/Red%20Alert%20-%20Homepage%20-%20Mobile.png)
